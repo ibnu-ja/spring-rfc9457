@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-rfc9457
+#  mvc:
+#    problemdetails:
+#      enabled: true
+server:
+  port: 8282
+  error:
+    include-message: ON_PARAM
+    include-binding-errors: ON_PARAM
