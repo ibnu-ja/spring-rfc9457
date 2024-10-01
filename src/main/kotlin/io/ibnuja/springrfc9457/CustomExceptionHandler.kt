@@ -44,7 +44,6 @@ class CustomExceptionHandler(
 		val problemDetail =
 			ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error has occurred")
 		logger.error("An unexpected error has occurred", e)
-		problemDetail.addProblemDetail(e, request)
 		return problemDetail.apply { addProblemDetail(e, request) }
 	}
 
